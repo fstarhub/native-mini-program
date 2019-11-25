@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/test/test",
+    "pages/index/index",
+    "pages/list/list",
+    "pages/detail/detail"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#05FB00",
+    "navigationBarTitleText": "hello",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap97.json"
+}

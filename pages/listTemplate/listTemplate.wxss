@@ -1,0 +1,49 @@
+.tmpComtainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar_data{
+  padding: 10rpx;
+}
+
+.avatar_data image{
+  width: 60rpx;
+  height:60rpx;
+  vertical-align: middle;
+  margin-right:10rpx;
+}
+
+.avatar_data text{
+  vertical-align: middle;
+}
+
+.company {
+  font-size: 38rpx;
+  font-weight: bold;
+  padding-left: 10rpx;
+}
+
+.tmpImg {
+  width: 100%;
+  height: 460rpx;
+}
+
+.content {
+  display: inline-block;
+  font-size: 35rpx;
+  text-indent: 35rpx;
+}
+
+.star_view_container image {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.star_view_container text {
+  font-size: 25rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}

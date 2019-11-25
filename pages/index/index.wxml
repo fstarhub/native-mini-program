@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="indexContainer"> 
+  <image wx:if='{{userInfo.avatarUrl}}' class='indexImg' src="{{userInfo.avatarUrl}}"></image>
+  <button wx:else open-type="getUserInfo" class="btn" bindgetuserinfo="handleGetUserInfo">点我登录</button>
+  <text class="userName">welcome {{userInfo.nickName}}</text>
+  <view class="goStudy">
+    <text catchtap="handleChild">开启小程序之旅</text>
+    <button class="btnOne" bindtap="goToTest">test</button>
+  </view>
+</view>

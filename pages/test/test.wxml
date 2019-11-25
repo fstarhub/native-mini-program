@@ -1,0 +1,35 @@
+<!--pages/test/test.wxml-->
+<view class="texst1">
+<view>picker</view>
+    <!-- <view>事件选择器</view>
+        <picker-view indicatot-style="height:50px;"
+    style="width:100%; font-size: 14px;
+    value="{{value}}"
+    bindChange="bindChange"
+    class="pickerView"
+    wx:if="{{showPicker}}"
+    data-id="pickerFloat">
+        <picker-view-column>
+            <view wx:for="{{years}}"
+            style="line-height=50px;">{{item}}</view>
+        </picker-view-column>
+    
+    </picker-view> -->
+    <picker-view indicator-style="height: 50px;" style="width: 100%;font-size: 14px;" value="{{value}}" bindchange="bindChange" class="pickerView" wx:if="{{showPicker}}" data-id="pickerFloat">
+<picker-view-column>
+<view wx:for="{{years}}" style="line-height: 50px">{{years}}年</view>
+</picker-view-column>
+<picker-view-column>
+<view wx:for="{{months}}" style="line-height: 50px">{{months}}月</view>
+</picker-view-column>
+<picker-view-column>
+<view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+</picker-view-column>
+<picker-view-column>
+<view wx:for="{{hours}}" style="line-height: 50px">{{item}}时</view>
+</picker-view-column>
+<picker-view-column>
+<view wx:for="{{mins}}" style="line-height: 50px">{{item}}分</view>
+</picker-view-column>
+</picker-view>
+</view>

@@ -1,0 +1,10 @@
+@import '../listTemplate/listTemplate.wxss';
+.listContainer sweiper{
+  height:100%;
+  width: 100%;
+}
+
+.listContainer swiper image {
+  width: 100%;
+  height: 100%;
+}
