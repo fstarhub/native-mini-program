@@ -44,17 +44,17 @@ Page({
   data: {
     // 日期的数据
     years: years,
-    year: date.getFullYear(),
+    year: 2017,
     months: months,
-    month1: 2,
+    month: 2,
     days: days,
     day: 2,
     hours: hours,
-    hour: 9,
+    hour: 2,
     mins: mins,
     min: 16,
     showPicker: false,
-    value: []
+    value: [1,1,1,1,1]
   },
 
   // 改变日期
