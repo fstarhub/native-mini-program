@@ -6,7 +6,7 @@ const months = []
 const days = []
 const hours = [];
 const mins = [];
-for (let i = 2017; i <= date.getFullYear() + 1; i++) {
+for (let i = 2019; i <= date.getFullYear() + 1; i++) {
   years.push("" + i)
 }
 for (let i = 1; i <= 12; i++) {
@@ -44,33 +44,36 @@ Page({
   data: {
     // 日期的数据
     years: years,
-    year: 2017,
+    year: 2019,
     months: months,
-    month: 2,
+    month: 1,
     days: days,
-    day: 2,
+    day: 1,
     hours: hours,
-    hour: 2,
+    hour: 0,
     mins: mins,
-    min: 16,
+    min: 0,
     showPicker: false,
-    value: [1,1,1,1,1]
+    value: [0,0,0,0,0],
+    endTime: ''
   },
 
   // 改变日期
   bindChange: function (e) {
     const val = e.detail.value
+    console.log(val)
     this.setData({
       year: this.data.years[val[0]],
-      month1: this.data.months[val[1]],
+      month: this.data.months[val[1]],
       day: this.data.days[val[2]],
       hour: this.data.hours[val[3]],
       min: this.data.mins[val[4]],
       value: [val[0], val[1], val[2], val[3], val[4]]
     })
     this.setData({
-      endTime: this.data.year + '-' + this.data.month1 + '-' + this.data.day + ' ' + this.data.hour + ':' + this.data.min + ':00'
+      endTime: this.data.year + '-' + this.data.month + '-' + this.data.day + ' ' + this.data.hour + ':' + this.data.min + ':00'
     })
+    console.log(this.data.endTime+'----'+this.data.year)
   },
   showPicker: function () {
     this.setData({ showPicker: true })
@@ -86,10 +89,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(this.data.years)
-    console.log(months)
-    console.log(days)
-    console.log(hours)
+
   },
 
   /**

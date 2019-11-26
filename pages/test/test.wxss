@@ -1,1 +1,22 @@
 /* pages/test/test.wxss */
+.testbox {
+  width: 100%;
+  height: 100%;
+  /* background: pink; */
+}
+.pageTitle {
+  text-align: center;
+}
+.pickerView {
+  height: 130px;
+  padding: 0 30px;
+}
+.selectTimeBtn {
+  width: 600rpx;
+  margin-top: 20px;
+  background: salmon;
+  color: gold;
+}
+.active {
+  color: blue;
+}

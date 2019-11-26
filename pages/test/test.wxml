@@ -1,22 +1,23 @@
 <!--pages/test/test.wxml-->
-<view class="texst1">
-    <view>picker</view>
-    <picker-view indicator-style="height: 50px;" style="width: 100%;font-size: 14px;" value="{{value}}" bindchange="bindChange" class="pickerView" wx:if="{{showPicker===false}}" data-id="pickerFloat">
+<view class="testbox">
+    <view class="pageTitle">picker</view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%;font-size: 14px; " value="{{value}}" bindchange="bindChange" class="pickerView" data-id="pickerFloat">
         <picker-view-column>
-            <view wx:for="{{years}}" wx:key="{{years.index}}" style="line-height: 50px">{{years[index]}}年</view>
+            <view wx:for="{{years}}" wx:key="{{years.index}}" style="line-height: 50px" class='{{year==item ? "active" : "" }}'>{{item}}年</view>
         </picker-view-column>
         <picker-view-column>
-            <view wx:for="{{months}}" wx:key="{{years.index}}" style="line-height: 50px">{{months}}月</view>
+            <view wx:for="{{months}}" wx:key="{{years.index}}" style="line-height: 50px" class='{{month==item ? "active" : "" }}'>{{item}}月</view>
         </picker-view-column>
         <picker-view-column>
-            <view wx:for="{{days}}" wx:key="{{years.index}}" style="line-height: 50px">{{item}}日</view>
+            <view wx:for="{{days}}" wx:key="{{years.index}}" style="line-height: 50px" class='{{day==item ? "active" : "" }}'>{{item}}日</view>
         </picker-view-column>
         <picker-view-column>
-            <view wx:for="{{hours}}" wx:key="{{years.index}}" style="line-height: 50px">{{item}}时</view>
+            <view wx:for="{{hours}}" wx:key="{{years.index}}" style="line-height: 50px" class='{{hour==item ? "active" : "" }}'>{{item}}时</view>
         </picker-view-column>
         <picker-view-column>
-            <view wx:for="{{mins}}" wx:key="{{years.index}}" style="line-height: 50px">{{item}}分</view>
+            <view wx:for="{{mins}}" wx:key="{{years.index}}" style="line-height: 50px" class='{{min==item ? "active" : "" }}'>{{item}}分</view>
         </picker-view-column>
     </picker-view>
-    <view>我司下面的元素</view>
+    <button class="selectTimeBtn" bindtap="showPicker">选定时间</button>
+    <view wx:if="{{showPicker}}">您选择的时间是{{endTime}}</view>
 </view>
