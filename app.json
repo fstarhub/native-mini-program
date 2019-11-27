@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/test/test",
+    "pages/progress/progress",
     "pages/index/index",
     "pages/list/list",
-    "pages/detail/detail"
-    
+    "pages/detail/detail",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
