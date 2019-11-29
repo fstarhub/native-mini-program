@@ -1,3 +1,4 @@
 <!--pages/richText/richText.wxml-->
 <view>rich text</view>
 <rich-text nodes="{{nodes}}" bindtap="toDo"></rich-text>
+<navigator url="/pages/test/test">去往test页面</navigator>
