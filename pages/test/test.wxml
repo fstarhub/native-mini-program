@@ -19,5 +19,5 @@
         </picker-view-column>
     </picker-view>
     <button class="selectTimeBtn" bindtap="showPicker">选定时间</button>
-    <view wx:if="{{showPicker}}">您选择的时间是{{endTime}}</view>
+    <view wx:if="{{showPicker}}">您选择冲突的时间是{{endTime}}</view>
 </view>
