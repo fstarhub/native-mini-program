@@ -1,0 +1,93 @@
+/* pages/chat/chat.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+.chat-header {
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #333333;
+}
+
+.chat-area {
+  flex: 1;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.chat-message-left, .chat-message-right {
+  display: flex;
+  margin: 10px 0;
+}
+
+.chat-message-left {
+  align-items: center;
+}
+
+.chat-message-right {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.voice-result {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.advice text {
+  display: block;
+  margin-bottom: 6px;
+  color: #666666;
+}
+
+.input-bar {
+  background-color: #ffffff;
+  padding: 8px;
+}
+
+.text-input-bar, .voice-input-bar {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+button {
+  color: #007aff;
+  padding: 8px 12px;
+}
+
+.prompt {
+  font-size: 16px;
+  color: #333333;
+  margin-right: 8px;
+}

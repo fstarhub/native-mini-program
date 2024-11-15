@@ -1,0 +1,47 @@
+<!--pages/chat/chat.wxml-->
+<view class="container">
+  <!-- 顶部导航栏 -->
+  <view class="chat-header">健康助手</view>
+
+  <!-- 主聊天区域 -->
+  <view class="chat-area">
+    <!-- AI助手消息 -->
+    <view class="chat-message-left">
+      <image class="avatar" src="../../assets/avatar.png"></image>
+      <view class="message">
+        <text>你好，我是你的AI健康助手晓医 😄</text>
+        <text>我已深入学习并掌握海量医学书籍、权威指南文献等知识，随时找晓医，个性化解答你的健康问题~</text>
+      </view>
+    </view>
+    <!-- 用户消息 -->
+    <view class="chat-message-right">
+      <view class="message">
+        <text>感冒怎么办？</text>
+      </view>
+    </view>
+
+    <!-- 语音输入的结果展示 -->
+    <view wx:if="{{inputMode === 'voice'}}" class="voice-result">
+      <text>对于感冒的处理，通常可以采取以下措施：</text>
+      <view class="advice">
+        <text>• 药物治疗：可以根据症状选择相应的药物……</text>
+        <text>• 保持适当饮水：足够的水分摄入……</text>
+        <text>• 饮食调理：建议多吃新鲜蔬菜和水果……</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部输入区域，根据 inputMode 动态切换 -->
+  <view class="input-bar">
+    <view wx:if="{{inputMode === 'text'}}" class="text-input-bar">
+      <input placeholder="写下你想问的问题..." bindinput="handleInput" />
+      <button bindtap="switchToVoice">语音输入</button>
+    </view>
+
+    <view wx:if="{{inputMode === 'voice'}}" class="voice-input-bar">
+      <text class="prompt">感冒怎么办？</text>
+      <button bindtap="stopVoiceInput">停止回答</button>
+      <button bindtap="switchToText">切换到文字输入</button>
+    </view>
+  </view>
+</view>
